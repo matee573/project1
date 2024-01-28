@@ -1,0 +1,289 @@
+<!-- vscode-language=jinja2 -->
+{% extends "base.html" %}
+
+{% block content %}
+
+
+        <div class="col">
+            <h1>NFT SHOP</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse saepe minima voluptatum similique fugit quasi, corporis dolore quibusdam earum quam quisquam nisi voluptatibus reiciendis ad illo eligendi maiores blanditiis? Quia.</p>
+            <button type="button">Explore</button>
+        </div>
+        <div class="col">
+            <div class="card card1">
+                <h5>GLOBAL NFT</h5>
+
+            </div>
+            <div class="card card2">
+                <h5>NFT</h5>
+
+            </div>
+            <div class="card card3">
+                <h5></h5>
+            <p> </p>
+
+            </div>
+            <div class="card card4">
+                <h5></h5>
+                <p></p>
+
+            </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<section id="product1" class="seaction-p1">
+    <h2 class="h2">Featured Products</h2>
+    <p>Summer Collection New Modern Design</p>
+
+    <div class="row">
+        {% for item in product %}
+        <div class="col-md-4">
+            <div class="pro-container">
+                <div class="pro">
+                    <img src="/static/{{ item.img }}" class="pro-img">
+                    <div class="des">
+                        <h5>{{ item.name }}</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>{{ item.price }}<sup>$</sup></h4>
+                    </div>
+                    <a href="/view_product/{{ item.id }}" class="product-link"><i class="fa fa-cart-shopping cart"></i></a>
+                    <li class="list-group-item">
+                        <a href="/edit_product/{{ item.id }}" class="btn btn-outline-warning">
+                            რედაქტირება
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/delete_product/{{ item.id }}" class="btn btn-outline-danger">
+                            წაშლა
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+
+
+
+<section class="services ">
+	
+	<div class="s-heading">
+	<h1>Ser<font color="#4a90e2">vic</font>es</h1>
+	<p>We Provide The Best In Class Servies For Our Customers</p>
+	</div>
+	
+	<div class="s-box-container">
+
+	<div class="s-box">
+	
+	<div class="bar"></div>
+	
+	<img alt="1" src="static/img/wallet.png" />
+	
+	<h1>Spend Money</h1>
+	
+		<p>Track on your all daily expense and make your day to life easier.</p>
+	
+	<a class="s-btn" href="#">More</a>
+	</div>
+	<div class="s-box">
+	
+	<div class="bar"></div>
+	
+	<img alt="2" src="static/img/money.png" />
+	
+	<h1>Set Budget</h1>
+	
+		<p>Make a Budget That Fit Right With You And Can Do Most With It</p>
+	
+	<a class="s-btn" href="#">More</a>
+	</div>
+
+	<div class="s-box">
+	
+	<div class="bar"></div>
+	
+	<img alt="3" src="static/img/security.png" />
+	
+	<h1>Security</h1>
+		<p>We Store All Card Info And Money Safe To Make You Relax And Crazy</p>
+	
+	<a class="s-btn" href="#">More</a>
+	</div>
+	</div>
+	</section>
+
+    <section>
+
+        <h1 class="text-center text-dark" id="h11">Contact Us</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+             <div class="contact-container">
+                 <div class="form-container">
+                     <h3 class="text-light" >Message Us</h3>
+                     <form action="" class="contact-form">
+                         <input type="text" placeholder="Your Name" required>
+                         <input type="email" name="" id="" placeholder="Enter Your Email.." required>
+                         <textarea name="" id="" cols="30" rows="10" placeholder="Write Messahe Here..." required></textarea>
+                         <input type="submit" value="Send" class="send-button">
+                     </form>
+                 </div>
+                 <div class="map">
+                      
+                 <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.88738780162!2d44.740175900000004!3d41.7229488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40447311abb9c315%3A0x2994bf41c0eb46d7!2s34%2F34b%20Alexander%20Kazbegi%20Ave%2C%20T&#39;bilisi!5e0!3m2!1sen!2sge!4v1683313285190!5m2!1sen!2sge" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  ></iframe>
+     
+                 </div>
+             </div>
+         </section>
+ 
+    <div class="container">
+        <h2 class="text-dark text-center mb-3" id="post" >Post a Comment</h2>
+    </div>
+    <div class="comment-session">
+        <div class="post-comment">
+            <div class="list">
+                <div class="user">
+                    <div class="user-image"><img src="static/img/gio.webp" alt="image"> </div>
+                    <div class="user-meta">
+                        <div class="name">Giorgi</div>
+                        <div class="day">10 days ago</div>
+                    </div>
+                </div>
+                <div class="comment-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae labore sequi quo quas aliquid odit nam provident, ex alias blanditiis, nesciunt aperiam quasi possimus eius hic. Quas fugit aliquam molestiae.</div>
+
+            </div>
+            <div class="list">
+                <div class="user">
+                    <div class="user-image"><img src="static/img/kaci.jpg" alt="image"> </div>
+                    <div class="user-meta">
+                        <div class="name">Erekle</div>
+                        <div class="day">6 days ago</div>
+                    </div>
+                </div>
+                <div class="comment-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae labore sequi quo quas aliquid odit nam provident, ex alias blanditiis, nesciunt aperiam quasi possimus eius hic. Quas fugit aliquam molestiae.</div>
+
+            </div>
+            <div class="list">
+                <div class="user">
+                    <div class="user-image"><img src="static/img/nika.jpg" alt="image"> </div>
+                    <div class="user-meta">
+                        <div class="name">Nika</div>
+                        <div class="day">2 days ago</div>
+                    </div>
+                </div>
+                <div class="comment-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae labore sequi quo quas aliquid odit nam provident, ex alias blanditiis, nesciunt aperiam quasi possimus eius hic. Quas fugit aliquam molestiae.</div>
+
+            </div>
+        </div>
+        <div class="comment-box">
+            <div class="user">
+                <div class="image"><img src="static/img/person.png" alt="image"></div>
+                <div class="name">You </div>
+            </div>
+            <from action="" method="post">
+                <textarea name="comment" id="" cols="30" rows="10" placeholder="Add Comment" ></textarea>
+                <button class="comment-submit">Comment</button>
+            </from>
+        </div>
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <footer>
+        <div class="footer-col ">
+            <h4 id="h4">products</h4>
+            <ul>
+                <li><a href="#">teams</a></li>
+                <li><a href="#">advertising</a></li>
+                <li><a href="#">talent</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 id="h22">network</h4>
+            <ul>
+                <li><a href="#">technology</a></li>
+                <li><a href="#">science</a></li>
+                <li><a href="#">business</a></li>
+                <li><a href="#">professional</a></li>
+                <li><a href="#">API</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="company">company</h4>
+            <ul>
+                <li><a href="#">about</a></li>
+                <li><a href="#">legal</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 class="folow">follow us</h4>
+            <div class="links">
+
+                <a href="https://www.tbceducation.ge/?fbclid=IwAR2jd_8Wr5hSGn7qQajgumn4jL9LHl7qTfL_-BVZUkLYzqFlFsyc_c6xnEg"><img src="static/img/logo2.png" class="logo"></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+ 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+</body>
+</html>

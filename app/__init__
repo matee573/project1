@@ -1,0 +1,2 @@
+from extensions import app
+from app import home, view_product, add_product, edit_product, delete_product, login, register

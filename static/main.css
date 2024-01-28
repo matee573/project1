@@ -1,0 +1,45 @@
+
+.navbar2 {
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+.logo21{  
+    width: 50px;
+    cursor: pointer;
+}
+
+
+nav{
+    flex: 1;
+    text-align: right;
+
+}
+
+nav ul li {
+    list-style: none;
+    displaY: inline-block;
+    margin-left: 60px;
+    position: relative;
+
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px; 
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
